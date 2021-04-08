@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Detection</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'> 
+<link href='https://fonts.googleapis.com/css?family=Times+new+roman+Condensed:500' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  
+
+<style>
+.login{
+top: 20%;
+}
+body {
+  background-image: url('https://t4.ftcdn.net/jpg/00/62/40/47/240_F_62404725_MosqAuWemYHVu1h0MhfwGSuS7TCuByIN.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+input, select {
+  width: 500px;
+  height: 25pt;
+  color: #000;
+  background-color:paleturquoise;
+}
+
+button{
+  width: auto;
+  height: 30pt;
+  background-color: #000;
+  color: white;
+  font-size:medium;
+}
+
+</style>
+</head>
+
+<p align="right"><a href="https://medium.com/@oliverjatwal/the-truth-about-diabetes-5e9f5ec50430"> <button><b style="color: white;font-size:20px;font-family:Times">More info</b></button>
+</p>
+</a>
+
+<body>
+ <div class="login">
+  
+	<h2 style="color:#000;text-align:center;">Prediction of Diabetes</h2>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('y_predict')}}"method="post">
+      <input type="number" name="Age" placeholder="Enter your Age" required="required" /> 
+      
+     <select name="Gender" required="required"> -->
+		 <option value="">Select Gender </option>-->
+		<option value="1">Male</option> -->
+		<option value="0">Female</option>-->
+		<!--  <option value="New York">New York</option> -->
+		</select>
+    <br>
+
+    <select name="Polyuria" required="required"> --> 
+      <option value="">Do you have Polyuria? (Urinates more than usual & large amounts of urine)</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select>
+     <br>
+     
+     <select name="Polydipsia" required="required"> -->
+      <option value="">Do you have Polydipsia? (Feeling of extreme thirstiness)</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+    
+     <select name="sudden weight loss" required="required"> -->
+      <option value="">Suffered from sudden weight loss?</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+    
+
+     <select name="weakness" required="required"> -->
+      <option value="">Do you have Weakness?</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+  
+
+     <select name="Polyphagia" required="required"> -->
+      <option value="">Do you have Polyphagia? (Excessive hunger)</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+     
+
+     <select name="Genital thrush" required="required"> -->
+      <option value="">Do you have Genital thrush? (Reddening, Itching,Pain during urination, Odour)</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+    
+     <select name="visual blurring" required="required"> -->
+      <option value="">Do you have blurred vision?</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+    
+
+     <select name="Itching" required="required"> -->
+      <option value="">Do you have Itching?</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+     
+     <select name="Irritability" required="required"> -->
+      <option value="">Suffering from Irritation?</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+     
+     <select name="delayed healing" required="required"> -->
+      <option value="">Is your wound healing delayed?</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+     
+
+     <select name="partial paresis" required="required"> -->
+      <option value="">Suffering from Partial Paresis? (Week muscle movement)</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+     
+
+     <select name="muscle stiffness" required="required"> -->
+      <option value="">Do you have Muscle Stiffness?</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select>
+     <br> 
+    
+
+     <select name="Alopecia" required="required"> -->
+      <option value="">Do you have Alopecia? (Patchy hair loss on the head, arms)</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+     
+
+     <select name="Obesity" required="required"> -->
+      <option value="">Do you have Obesity? (Having an excess amount of body fat)</option>-->
+     <option value="1">Yes</option> -->
+     <option value="0">No</option>-->
+     </select> 
+     <br>
+  
+     
+		
+        <button style="margin-left: 30%;" type="submit">Diabetes Prediction</button>
+    
+    </form>
+
+   <br>
+  
+   {{ prediction_text }}
+   
+ </div>
+
+
+</body>
+</html>
+
