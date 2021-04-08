@@ -4,7 +4,7 @@ Building a model to predict diabetes disease at an early stage can help a person
 
 The dataset used in this study, is originally collected using direct questionnaires from the patients of Sylhet Diabetes Hospital in Sylhet, Bangladesh and approved by a doctor.
 
-Describion- 
+Describtion- 
 Age 1.20-65
 Sex 1. Male, 2.Female
 Polyuria 1.Yes, 2.No.
