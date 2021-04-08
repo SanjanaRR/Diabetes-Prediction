@@ -1,8 +1,10 @@
 # Diabetes-Prediction
 
 Building a model to predict diabetes disease at an early stage can help a person to take the necessary precautions and change his/her lifestyle accordingly to either prevent the occurrence of this disease or control the disease(For people who already have the disease).
+
 The dataset used in this study, is originally collected using direct questionnaires from the patients of Sylhet Diabetes Hospital in Sylhet, Bangladesh and approved by a doctor.
-Describtion- 
+
+Describion- 
 Age 1.20-65
 Sex 1. Male, 2.Female
 Polyuria 1.Yes, 2.No.
